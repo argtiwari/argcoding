@@ -57,7 +57,7 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
               className="px-5 py-2 rounded-full border border-indigo-500/50 text-indigo-300 text-sm font-semibold transition-all"
             >
-              <a href="#lets">Let's Talk</a>
+              <a href="https://api.whatsapp.com/send/?phone=919990170562&text=Hi%2C+I+want+to+discuss+a+project&type=phone_number&app_absent=0" target="_blank">Let's Talk</a>
             </motion.button>
           </div>
 

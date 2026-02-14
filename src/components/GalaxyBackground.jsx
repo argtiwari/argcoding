@@ -2,11 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const GalaxyBackground = () => {
-  // पूरी स्क्रीन के लिए थोड़े ज़्यादा तारे बनाते हैं
   const stars = Array(50).fill(0).map(() => ({
     top: Math.random() * 100 + "%",
     left: Math.random() * 100 + "%",
-    size: Math.random() * 2 + 1 + "px", // थोड़े छोटे तारे ताकि कंटेंट डिस्टर्ब न हो
+    size: Math.random() * 2 + 1 + "px", 
     delay: Math.random() * 5,
     duration: Math.random() * 3 + 2,
   }));

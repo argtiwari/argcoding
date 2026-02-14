@@ -38,7 +38,7 @@ const ChatWidget = () => {
             {/* Footer Button */}
             <div className="p-3 bg-white border-t border-slate-100">
               <a 
-                href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20discuss%20a%20project" // Apna number yahan daalo
+                href="https://wa.me/919990170562?text=Hi,%20I%20want%20to%20discuss%20a%20project" 
                 target="_blank"
                 className="block w-full bg-green-500 text-white text-center py-2 rounded-full font-bold text-sm hover:bg-green-600 transition-colors"
               >

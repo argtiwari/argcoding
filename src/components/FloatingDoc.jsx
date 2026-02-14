@@ -4,7 +4,7 @@ import { FaFileAlt } from "react-icons/fa";
 
 const FloatingDoc = () => {
   // Apne Web Resume ka link yahan daalo
-  const resumeLink = "https://your-resume-link.com"; 
+  const resumeLink = "https://my-interactive-resume-two.vercel.app/"; 
 
   return (
     <motion.a

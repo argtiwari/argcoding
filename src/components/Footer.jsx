@@ -60,10 +60,11 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex gap-6 pt-4">
-            {[<FaGithub />, <FaLinkedin />, <FaTwitter />, <FaInstagram />].map((icon, index) => (
+          <div className="flex gap-6 pt-4">
+            {[<FaGithub />].map((icon, index) => (
               <motion.a
                 key={index}
-                href="#"
+                href="https://github.com/argtiwari" target="_blank"
                 whileHover={{ y: -5, color: "#a855f7" }}
                 className="text-2xl text-slate-400 transition-colors bg-white/5 p-3 rounded-full border border-white/10 hover:border-purple-500/50 hover:bg-white/10"
               >
@@ -71,6 +72,45 @@ const Footer = () => {
               </motion.a>
             ))}
           </div>
+          <div className="flex gap-1 pt-4">
+            {[<FaLinkedin />].map((icon, index) => (
+              <motion.a
+                key={index}
+                href="https://www.linkedin.com/in/anurag-tiwari-9a3185392/" target="_blank"
+                whileHover={{ y: -5, color: "#a855f7" }}
+                className="text-2xl text-slate-400 transition-colors bg-white/5 p-3 rounded-full border border-white/10 hover:border-purple-500/50 hover:bg-white/10"
+              >
+                {icon}
+              </motion.a>
+            ))}
+          </div>
+          <div className="flex gap-6 pt-4">
+            {[ <FaTwitter />].map((icon, index) => (
+              <motion.a
+                key={index}
+                href=""  target="_blank"
+                whileHover={{ y: -5, color: "#a855f7" }}
+                className="text-2xl text-slate-400 transition-colors bg-white/5 p-3 rounded-full border border-white/10 hover:border-purple-500/50 hover:bg-white/10"
+              >
+                {icon}
+              </motion.a>
+            ))}
+          </div>
+          <div className="flex gap-6 pt-4">
+            {[ <FaInstagram />].map((icon, index) => (
+              <motion.a
+                key={index}
+                href="https://instagram.com/argcoding" target="_blank"
+                whileHover={{ y: -5, color: "#a855f7" }}
+                className="text-2xl text-slate-400 transition-colors bg-white/5 p-3 rounded-full border border-white/10 hover:border-purple-500/50 hover:bg-white/10"
+              >
+                {icon}
+              </motion.a>
+            ))}
+          </div>
+          </div>
+          
+
         </div>
 
         {/* RIGHT SIDE: Holographic Planet */}

@@ -41,14 +41,14 @@ const Contact = () => {
               <ContactItem 
                 icon={<FaEnvelope />} 
                 title="Email" 
-                text="hello@arg.dev" 
-                link="mailto:hello@arg.dev" 
+                text="argtiwary11@gmail.com" 
+                link="argtiwary11@gmail.com" 
               />
               <ContactItem 
                 icon={<FaPhoneAlt />} 
                 title="Phone" 
-                text="+91 98765 43210" 
-                link="tel:+919876543210" 
+                text="+91 9990170562" 
+                link="tel:+919990170562" 
               />
               <ContactItem 
                 icon={<FaMapMarkerAlt />} 
@@ -69,8 +69,8 @@ const Contact = () => {
           >
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <InputGroup label="Your Name" placeholder="John Doe" type="text" />
-                <InputGroup label="Email Address" placeholder="john@example.com" type="email" />
+                <InputGroup label="Your Name" placeholder="argTiwari" type="text" />
+                <InputGroup label="Email Address" placeholder="arg@example.com" type="email" />
               </div>
               
               <InputGroup label="Subject" placeholder="Project Discussion" type="text" />

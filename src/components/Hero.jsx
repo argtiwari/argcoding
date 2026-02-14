@@ -5,7 +5,6 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { a, link } from "framer-motion/client";
 import { BsInstagram } from "react-icons/bs";
 
-// Hero component ke andar, return() se pehle ye paste karo:
 
 const socialLinks = [
   { 
@@ -26,10 +25,8 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-[#0a0a0a] pt-40">
 
-      {/* --- VIBRANT BACKGROUND (High Performance) --- */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
 
-        {/* Blob 1: Bright Purple/Pink (Top Left) */}
         <motion.div
           animate={{
             scale: [1, 1.1, 1],
@@ -39,7 +36,6 @@ const Hero = () => {
           className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600 rounded-full blur-[120px]"
         />
 
-        {/* Blob 2: Bright Cyan/Blue (Bottom Right) */}
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
@@ -49,7 +45,6 @@ const Hero = () => {
           className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-blue-500 rounded-full blur-[120px]"
         />
 
-        {/* Blob 3: Center Glow (Pink) - Ye "Chamak" layega */}
         <motion.div
           animate={{ opacity: [0.2, 0.4, 0.2] }}
           transition={{ duration: 5, repeat: Infinity }}
@@ -61,7 +56,6 @@ const Hero = () => {
         <h1
           className="text-[18vw] font-black uppercase tracking-widest whitespace-nowrap"
           style={{
-            // Ye hai magic line: Text transparent hoga, bas outline dikhegi
             WebkitTextStroke: "2px rgba(255, 255, 255, 0.05)",
             color: "transparent"
           }}
@@ -114,24 +108,23 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
-        >
+        > <a href="https://github.com/argtiwari" target="_blank"> 
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-lg font-bold text-white shadow-lg shadow-purple-500/40 hover:shadow-purple-500/60 transition-all border border-white/10"
           >
             Explore My Work
-          </motion.button>
-
+          </motion.button></a>
+<a href="#contact">
           <motion.button
             whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
             whileTap={{ scale: 0.95 }}
             className="px-10 py-4 border border-slate-500 rounded-full text-lg font-semibold text-slate-300 hover:text-white hover:border-white transition-colors backdrop-blur-sm"
           >
             Contact Me
-          </motion.button>
+          </motion.button> </a>
         </motion.div>
-
         {/* Social Icons */}
         <motion.div
   initial={{ opacity: 0 }}
