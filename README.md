@@ -90,9 +90,9 @@ Example:
 To run this project locally:
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/argtiwari/argcoding.git
 
-cd your-repo-name
+cd argcoding
 
 npm install
 
@@ -106,7 +106,7 @@ npm run dev
 If you want to collaborate, hire me, or discuss a project:
 
 Email: [argtiwary11gmail.com](mailto:argtiwary11gmail.com)
-Portfolio: https://your-portfolio-link.com
+Portfolio: https://argcoding.vercel.app/
 GitHub: https://github.com/argtiwari
 
 ---
