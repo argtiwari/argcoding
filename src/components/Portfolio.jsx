@@ -1,40 +1,44 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 /* ================= PROJECT DATA ================= */
+
 const projects = [
   {
     title: "Politician Portfolio",
-    desc: "Static site with SEO, animations, responsive design, navigation menu and contact form.",
+    desc: "Modern portfolio website with SEO optimization, responsive layout, smooth animations and contact system.",
     tags: ["React", "Tailwind", "SEO"],
     image: "/projects/politician.png",
     live: "https://www.amrendrakumaratri.in/",
     github: "https://github.com/argtiwari/Amrendra-Kumar-Atri",
     gradient: "from-blue-400 to-indigo-600",
   },
+
   {
     title: "Designer QR Generator",
-    desc: "The Next-Generation, Futuristic QR Code Studio.,QR Supremacy goes beyond standard black-and-white squares. It's a powerful, dark-mode-first web application designed to create stunning, branded, and artistic QR codes.",
-    tags: ["Next.js", "typescript", "Tailwind"],
+    desc: "Futuristic QR code generator with dark UI, branded QR styling and modern customization tools.",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
     image: "/projects/qr.png",
     live: "https://qr-supremacy.vercel.app/",
     github: "https://github.com/argtiwari/QR-supremacy",
     gradient: "from-emerald-400 to-teal-600",
   },
+
   {
-    title: "Habit Tracker With Gamify",
-    desc: "Gamify your life. Turn habits into monsters, earn XP, and become the hero of your own story. Quest System: Turn daily tasks into quests ,XP & Leveling Gain Experience  to level up your character Health System Failing a habit damages your HP, Don't die Gold Economy Earn gold to buy new Avatars ",
-    tags: ["React", "firebase", "tailwind ,Framer Motion (Animations)"],
+    title: "HabitQuest - Gamified Habit Tracker",
+    desc: "Gamified productivity app where habits become quests, users gain XP, level up characters and track progress.",
+    tags: ["React", "Firebase", "Tailwind", "Framer Motion"],
     image: "/projects/habitquest.png",
     live: "https://habitquest-in.vercel.app/",
-    github: "https://github.com/yourusername/ecommerce-platform",
+    github: "https://github.com/argtiwari/habitquest",
     gradient: "from-purple-400 to-pink-600",
   },
+
   {
-    title: "Career Counselling Website",
-    desc: "CareerPath India is an informative and visually engaging website designed to help students and job aspirants explore different career options available in India. It acts as a career guide platform that provides insights into various professional fields, recommended educational paths, and practical resources to plan one’s career journey confidently.",
-    tags: ["React", "Tailwind", "SEO", "API"],
+    title: "CareerPath India",
+    desc: "Career guidance platform helping students explore professional paths, education options and opportunities.",
+    tags: ["React", "Tailwind", "API"],
     image: "/projects/career.png",
     live: "https://argtiwari.github.io/CareerPath-India/",
     github: "https://github.com/argtiwari/CareerPath-India",
@@ -43,6 +47,7 @@ const projects = [
 ];
 
 /* ================= MAIN COMPONENT ================= */
+
 const Portfolio = () => {
   const containerRef = useRef(null);
 
@@ -53,7 +58,9 @@ const Portfolio = () => {
 
   return (
     <section ref={containerRef} className="relative pb-20">
+      
       {/* HEADER */}
+
       <div
         id="portfolio"
         className="pt-20 pb-8 text-center sticky top-0 backdrop-blur-md bg-black/20 z-10 mb-10"
@@ -68,10 +75,14 @@ const Portfolio = () => {
             Works.
           </span>
         </motion.h2>
-        <p className="text-slate-400 text-lg">Scroll to explore</p>
+
+        <p className="text-slate-400 text-lg">
+          Scroll to explore my featured projects
+        </p>
       </div>
 
       {/* STACK */}
+
       <div className="max-w-5xl mx-auto px-4">
         {projects.map((project, index) => {
           const targetScale = 1 - (projects.length - index) * 0.05;
@@ -93,6 +104,7 @@ const Portfolio = () => {
 };
 
 /* ================= CARD COMPONENT ================= */
+
 const Card = ({
   i,
   title,
@@ -107,6 +119,7 @@ const Card = ({
   targetScale,
 }) => {
   const container = useRef(null);
+  const [expanded, setExpanded] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: container,
@@ -116,18 +129,43 @@ const Card = ({
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
+    <div
+      ref={container}
+      className="h-screen flex items-center justify-center sticky top-0"
+    >
       <motion.div
         style={{ scale, top: `calc(-5vh + ${i * 25}px)` }}
         className="relative flex flex-col md:flex-row gap-8 bg-[#161b22] border border-white/10 rounded-3xl p-8 md:p-12 w-full max-w-4xl h-[60vh] shadow-2xl origin-top"
       >
         {/* LEFT CONTENT */}
+
         <div className="w-full md:w-1/2 flex flex-col justify-between h-full z-10">
           <div>
+
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
               {title}
             </h3>
-            <p className="text-slate-400 text-lg mb-6">{desc}</p>
+
+            {/* DESCRIPTION */}
+
+            <p
+              className={`text-slate-400 text-lg mb-2 ${
+                expanded ? "" : "line-clamp-3"
+              }`}
+            >
+              {desc}
+            </p>
+
+            {desc.length > 100 && (
+              <button
+                onClick={() => setExpanded(!expanded)}
+                className="text-indigo-400 text-sm hover:text-indigo-300 mb-4"
+              >
+                {expanded ? "Show less ▲" : "Read more ▼"}
+              </button>
+            )}
+
+            {/* TAGS */}
 
             <div className="flex flex-wrap gap-3">
               {tags.map((tag, idx) => (
@@ -139,10 +177,13 @@ const Card = ({
                 </span>
               ))}
             </div>
+
           </div>
 
           {/* LINKS */}
-          <div className="flex gap-4 mt-8">
+
+          <div className="flex gap-4 mt-6">
+
             <a
               href={live}
               target="_blank"
@@ -160,11 +201,14 @@ const Card = ({
             >
               <FaGithub size={20} />
             </a>
+
           </div>
         </div>
 
         {/* RIGHT IMAGE */}
+
         <div className="w-full md:w-1/2 h-full rounded-2xl relative overflow-hidden group">
+
           {image ? (
             <img
               src={image}
@@ -174,7 +218,9 @@ const Card = ({
           ) : (
             <div className={`w-full h-full bg-gradient-to-br ${gradient}`} />
           )}
-          <div className="absolute inset-0 bg-black/30" />
+
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
+
         </div>
       </motion.div>
     </div>

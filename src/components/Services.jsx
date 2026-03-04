@@ -1,18 +1,18 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { FaLaptopCode, FaMobileAlt, FaRocket, FaLayerGroup } from "react-icons/fa";
+import { FaLaptopCode, FaMobileAlt, FaRocket, FaBriefcase,FaHandshake, FaLayerGroup } from "react-icons/fa";
 
 const services = [
   {
-    title: "Web Engineering",
+    title: "Website Development",
     icon: <FaLaptopCode />,
-    desc: "I build high-performance websites that load in under 1 second.",
+    desc: "Modern, responsive and fast websites built using latest web technologies. Perfect for startups, schools, shops and small businesses.",
     color: "text-blue-400",
   },
   {
-    title: "App Development",
-    icon: <FaMobileAlt />,
-    desc: "Turning ideas into functional apps for iOS and Android.",
+    title: "Business / Portfolio Websites",
+    icon: <FaBriefcase />,
+    desc: "Professional websites to showcase businesses,services or personal brands with a modern design and strong online presence.",
     color: "text-purple-400",
   },
   {
@@ -22,9 +22,21 @@ const services = [
     color: "text-pink-400",
   },
   {
+    title: "Web App Development",
+    icon: <FaMobileAlt />,
+    desc: "Interactive web applications with dynamic features like dashboards, forms, and user interactions.",
+    color: "text-pink-400",
+  },
+  {
     title: "UI/UX Design",
     icon: <FaLayerGroup />,
     desc: "Designing interfaces that users fall in love with instantly.",
+    color: "text-cyan-400",
+  },
+  {
+    title: "Website Maintenance & Updates",
+    icon: <FaHandshake />,
+    desc: "Helping businesses maintain and improve their websites with updates, fixes and new features.",
     color: "text-cyan-400",
   },
 ];
