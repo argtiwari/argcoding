@@ -79,7 +79,7 @@ A career guidance platform designed to help students explore professional paths 
 
 
 
-![Portfolio Screenshot](.projects/preview.png)
+![Portfolio Screenshot](public\preview.png)
 
 ---
 
