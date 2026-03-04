@@ -77,11 +77,9 @@ A career guidance platform designed to help students explore professional paths 
 
 ## 📸 Website Preview
 
-(Add screenshots here)
 
-Example:
 
-![Portfolio Screenshot](./preview.png)
+![Portfolio Screenshot](.projects/preview.png)
 
 ---
 
